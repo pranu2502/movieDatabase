@@ -15,15 +15,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp">
+
             <ImageView
                 android:id="@+id/main_photo_image"
                 android:layout_width="0dp"
                 android:layout_height="266dp"
+                android:clickable="true"
                 app:imageUrl="@{detailViewModel.selectedProperty.Poster}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:src="@tools:sample/backgrounds/scenic"/>
+                tools:src="@tools:sample/backgrounds/scenic" />
             <TextView
                 android:id="@+id/property_type_text"
                 android:layout_width="wrap_content"
