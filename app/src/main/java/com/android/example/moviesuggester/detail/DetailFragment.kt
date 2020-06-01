@@ -25,8 +25,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.android.example.moviesuggester.R
 import com.android.example.moviesuggester.databinding.FragmentDetailsBinding
-//import com.android.example.moviesuggester.detail.DetailFragmentArgs
-//import com.example.android.marsrealestate.detail.DetailFragmentArgs
 
 
 
