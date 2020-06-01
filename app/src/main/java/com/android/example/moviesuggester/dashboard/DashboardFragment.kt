@@ -16,6 +16,7 @@ class DashboardFragment : Fragment() {
         ViewModelProviders.of(this).get(DashboardViewModel::class.java)
     }
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = FragmentDashboardBinding.inflate(inflater)
@@ -37,6 +38,14 @@ class DashboardFragment : Fragment() {
             }
         })
 
+        setHasOptionsMenu(true)
+
         return binding.root
     }
+
+//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+//        inflater.inflate(R.menu.search_bar, menu)
+//        super.onCreateOptionsMenu(menu, inflater)
+//    }
+
 }

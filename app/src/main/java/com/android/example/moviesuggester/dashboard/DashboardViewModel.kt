@@ -1,5 +1,6 @@
 package com.android.example.moviesuggester.dashboard
 
+import android.widget.EditText
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -34,9 +35,9 @@ class DashboardViewModel : ViewModel() {
     val navigateToSelectedProperty: LiveData<MovieDetails>
         get() = _navigateToSelectedProperty
 
-    private val _movieSearch = MutableLiveData<String>()
+    private val _movieSearch = MutableLiveData<EditText>()
 
-    val movieSearch:LiveData<String>
+    val movieSearch:LiveData<EditText>
         get() = _movieSearch
 
     private var viewModelJob = Job()
@@ -48,17 +49,17 @@ class DashboardViewModel : ViewModel() {
      * Call getMarsRealEstateProperties() on init so we can display status immediately.
      */
     init {
-        println("ojay")
-        getMovies()
+        println("okay")
+        getMovies("batman")
     }
 
     /**
      * Sets the value of the status LiveData to the Mars API status.
      */
-    private fun getMovies() {
+    private fun getMovies(movie:String) {
         coroutineScope.launch {
 
-            var getDetailsDeferred = MovieApi.retrofitService.getMovies("batman","1")
+            var getDetailsDeferred = MovieApi.retrofitService.getMovies(movie,"1")
 
             try {
 //                _status.value = MarsApiStatus.LOADING

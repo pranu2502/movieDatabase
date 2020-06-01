@@ -35,7 +35,8 @@ val Released:String,
     val Poster : String,
     val Ratings:List<RatingSources>,
     val Type: String,
-    val BoxOffice:String
+    val BoxOffice:String,
+    val Production:String
 ):Parcelable
 
 
