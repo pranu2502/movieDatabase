@@ -41,7 +41,7 @@ class DashboardViewModel : ViewModel() {
 
     init
     {
-        getMovies("hello")
+        getMovies("love")
     }
 
 
@@ -58,7 +58,6 @@ class DashboardViewModel : ViewModel() {
             try {
 
                 var results = getDetailsDeferred.await()
-
                 _details.value = results.Search
 
             } catch (e: Exception) {
