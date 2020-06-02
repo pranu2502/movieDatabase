@@ -56,7 +56,7 @@ class DetailViewModel(movieDetails: MovieDetails, app: Application) : AndroidVie
 
     private fun getSpecifics(){
         coroutineScope.launch {
-            var getSpecificsDeferred = MovieSpecificApi.retrofitService.getSpecifics(selectedProperty.value?.imdbID.toString())
+            var getSpecificsDeferred = MovieSpecificApi.retrofitService.getSpecifics(selectedProperty.value?.imdbID.toString(),"full")
             try{
                 var results = getSpecificsDeferred.await()
                 _specifics.value = results

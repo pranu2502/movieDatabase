@@ -33,13 +33,15 @@ interface MovieApiService {
     fun getMovies(
         @Query("s") movie: String?,
         @Query("page") page: String
+
     ): Deferred<ResultDetails>
 }
 
 interface MovieSpecificApiService {
     @GET("/?apikey=6d48273c")
     fun getSpecifics(
-        @Query("i")imdbID:String
+        @Query("i")imdbID:String,
+        @Query("plot")plot:String
     ):Deferred<MovieSpecifics>
 }
 

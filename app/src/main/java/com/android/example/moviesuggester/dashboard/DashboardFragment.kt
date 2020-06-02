@@ -38,11 +38,11 @@ class DashboardFragment : Fragment() {
 
         val edit = binding.root.findViewById<EditText>(R.id.editText)
 
-        dashboardViewModel.movieSearch.observe(this, Observer {
-            if(it != null){
-                dashboardViewModel.getText(edit.text.toString())
-            }
-        })
+//        dashboardViewModel.movieSearch.observe(this, Observer {
+//            if(it != null){
+//                dashboardViewModel.getText(edit.text.toString())
+//            }
+//        })
         edit.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
             }
