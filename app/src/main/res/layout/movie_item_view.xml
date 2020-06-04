@@ -38,6 +38,7 @@
             android:layout_marginTop="6dp"
             android:layout_marginBottom="20dp"
             android:autoLink="web"
+            android:fontFamily="@font/domine"
             android:text="@{detail.Title}"
             android:textAlignment="center"
             android:textColor="#dff0fa"
@@ -48,7 +49,7 @@
             app:layout_constraintStart_toStartOf="@+id/movie_poster"
             app:layout_constraintTop_toBottomOf="@+id/movie_poster"
             app:layout_constraintVertical_bias="0.0"
-            tools:text="movieName"/>
+            tools:text="movieName" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -6,6 +6,7 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -55,6 +56,10 @@ class DashboardFragment : Fragment() {
                 dashboardViewModel.getText(editable.toString())
             }
         })
+
+        var animFadein = AnimationUtils.loadAnimation(
+            context,
+            R.anim.fade_in)
 
         dashboardViewModel.navigateToSelectedProperty.observe(this, Observer {
             if (null != it) {

@@ -2,6 +2,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#3D3F39"
 >
     <data>
         <variable
@@ -50,14 +51,15 @@
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="178dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="178dp"
                 android:layout_marginTop="178dp"
-                android:text="@{detailViewModel.specifics.Title}"
-                android:textSize="24sp"
-                android:textColor="#D4F5FB"
+                android:fontFamily="@font/alfa_slab_one"
                 android:gravity="center_horizontal|top"
-                tools:text="title"/>
+                android:text="@{detailViewModel.specifics.Title}"
+                android:textColor="#D4F5FB"
+                android:textSize="24sp"
+                tools:text="title" />
             <TextView
                 android:id="@+id/runtime"
                 android:layout_width="80dp"
@@ -69,6 +71,7 @@
                 android:text="@{detailViewModel.specifics.Runtime}"
                 android:textSize="@dimen/font_small"
                 android:textColor="#D4F5FB"
+                android:fontFamily="@font/amaranth"
                 android:gravity="center_horizontal|top"
                 tools:text="199 min"/>
 
@@ -79,6 +82,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="250dp"
                 android:layout_alignParentTop="true"
+                android:fontFamily="@font/amaranth"
                 android:layout_marginTop="@dimen/margin_top_below_title"
                 android:text="|"
                 android:textSize="@dimen/font_small"
@@ -94,6 +98,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="250dp"
                 android:layout_marginTop="@dimen/margin_top_below_title"
+                android:fontFamily="@font/amaranth"
                 android:gravity="center_horizontal|top"
                 android:text="@{detailViewModel.specifics.Type}"
                 android:textColor="#D4F5FB"
@@ -109,6 +114,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="@dimen/margin_top_below_title"
                 android:text="|"
+                android:fontFamily="@font/amaranth"
                 android:textSize="@dimen/font_small"
                 android:textColor="#D4F5FB"
                 android:gravity="center_horizontal|top"
@@ -123,6 +129,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="@dimen/margin_top_below_title"
                 android:text="@{detailViewModel.specifics.Rated}"
+                android:fontFamily="@font/amaranth"
                 android:textSize="@dimen/font_small"
                 android:textColor="#D4F5FB"
                 android:gravity="center_horizontal|top"
@@ -150,10 +157,11 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="370dp"
+                android:fontFamily="@font/amaranth"
                 android:gravity="top"
                 android:text="@{detailViewModel.specifics.Plot}"
                 android:textColor="@color/main_font"
-                android:textSize="15sp"
+                android:textSize="20sp"
                 tools:text="When his parents are killed, billionaire playboy Bruce Wayne relocates to Asia where he is mentored by Henri Ducard and Ra\'s Al Ghul in how to fight evil. When learning about the plan to wipe out evil in Gotham City by Ducard, Bruce prevents this plan from getting any further and heads back to his home. Back in his original surroundings, Bruce adopts the image of a bat to strike fear into the criminals and the corrupt as the icon known as \'Batman\'. But it doesn\'t stay quiet for long." />
 
             <TextView
@@ -162,7 +170,6 @@
                 android:layout_height="2dp"
                 android:layout_below="@id/plot"
                 android:layout_alignParentLeft="true"
-
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
@@ -172,17 +179,15 @@
                 android:id="@+id/actors"
                 android:layout_width="65dp"
                 android:layout_height="23dp"
-                android:layout_alignParentLeft="true"
                 android:layout_below="@id/line2"
-                android:layout_marginTop="15dp"
-                android:text="Cast"
-                android:textSize="@dimen/font_small"
-                android:textColor="#000000"
-
+                android:layout_alignParentLeft="true"
                 android:layout_marginLeft="10dp"
-
-
-                android:gravity="top"/>
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/alice"
+                android:gravity="top"
+                android:text="Cast:"
+                android:textColor="#8eecff"
+                android:textSize="@dimen/font_small" />
 
 
             <TextView
@@ -191,7 +196,8 @@
                 android:layout_height="23dp"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@id/line2"
-                android:layout_marginLeft="120dp"
+                android:fontFamily="@font/amaranth"
+                android:layout_marginLeft="118dp"
                 android:layout_marginTop="15dp"
                 android:gravity="top"
                 android:text="@{detailViewModel.specifics.Actors}"
@@ -205,10 +211,11 @@
                 android:layout_height="23dp"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@id/actors"
+                android:fontFamily="@font/alice"
                 android:layout_marginTop="15dp"
-                android:text="Director"
+                android:text="Director:"
                 android:textSize="@dimen/font_small"
-                android:textColor="#000000"
+                android:textColor="#8eecff"
                 android:layout_marginLeft="10dp"
                 android:gravity="top"
                 />
@@ -221,6 +228,7 @@
                 android:layout_below="@id/castval"
                 android:layout_marginLeft="118dp"
                 android:layout_marginTop="15dp"
+                android:fontFamily="@font/amaranth"
                 android:gravity="top"
                 android:text="@{detailViewModel.specifics.Director}"
                 android:textColor="@color/main_font"
@@ -234,9 +242,10 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@id/director"
                 android:layout_marginTop="15dp"
-                android:text="Production"
+                android:fontFamily="@font/alice"
+                android:text="Production:"
                 android:textSize="@dimen/font_small"
-                android:textColor="#000000"
+                android:textColor="#8eecff"
                 android:layout_marginLeft="10dp"
 
                 android:gravity="top"
@@ -249,6 +258,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@id/directorval"
                 android:layout_marginLeft="118dp"
+                android:fontFamily="@font/amaranth"
                 android:layout_marginTop="15dp"
                 android:gravity="top"
                 android:text="@{detailViewModel.specifics.Production}"
@@ -264,8 +274,9 @@
                 android:layout_below="@id/production"
                 android:layout_marginTop="15dp"
                 android:textSize="@dimen/font_small"
-                android:textColor="#000000"
-                android:text="@string/box_office"
+                android:fontFamily="@font/alice"
+                android:textColor="#8eecff"
+                android:text="Box Office:"
                 android:layout_marginLeft="10dp"
                 android:gravity="top"
                 />
@@ -275,6 +286,7 @@
                 android:layout_width="264dp"
                 android:layout_height="23dp"
                 android:layout_alignParentLeft="true"
+                android:fontFamily="@font/amaranth"
                 android:layout_below="@id/productionval"
                 android:layout_marginLeft="117dp"
                 android:layout_marginTop="15dp"
@@ -292,8 +304,9 @@
                 android:layout_below="@id/box_office"
                 android:layout_marginTop="15dp"
                 android:textSize="@dimen/font_small"
-                android:textColor="#000000"
-                android:text="IMDB Rating"
+                android:fontFamily="@font/alice"
+                android:textColor="#8eecff"
+                android:text="IMDB Rating:"
                 android:gravity="top"
                 />
 
