@@ -20,6 +20,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RatingBar
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
@@ -35,6 +36,9 @@ class DetailFragment : Fragment() {
             R.layout.fragment_details,container,false)
 
         val application = requireNotNull(activity).application
+
+        val rating = binding.root.findViewById<RatingBar>(R.id.rating_stars)
+
 
         val movieDetails = DetailFragmentArgs.fromBundle(arguments!!).selectedProperty
 

@@ -24,7 +24,7 @@ data class MovieSpecifics(
     val Year: String,
     val  Rated:String,
     val Runtime:String,
-val Released:String,
+    val Released:String,
     val Genre:String,
     val Director:String,
     val Actors:String,
@@ -36,7 +36,9 @@ val Released:String,
     val Ratings:List<RatingSources>,
     val Type: String,
     val BoxOffice:String,
-    val Production:String
+    val Production:String,
+    var Genre_helper:List<String>,
+    val imdbRating:String
 ):Parcelable
 
 
@@ -45,5 +47,3 @@ data class RatingSources(
     val Source:String,
     val Value:String
 ):Parcelable
-
-

@@ -59,7 +59,26 @@ class DetailViewModel(movieDetails: MovieDetails, app: Application) : AndroidVie
             var getSpecificsDeferred = MovieSpecificApi.retrofitService.getSpecifics(selectedProperty.value?.imdbID.toString(),"full")
             try{
                 var results = getSpecificsDeferred.await()
-                _specifics.value = results
+                var genreList = results.Genre.split(",")
+                results.Genre_helper=genreList
+                val words = results.Plot.trim()
+
+               val wordSize = words.split(" ","\n").size
+                if(wordSize>100)
+                {
+                    var getSpecificsDeferred = MovieSpecificApi.retrofitService.getSpecifics(selectedProperty.value?.imdbID.toString(),"short")
+                    try{
+                        var results = getSpecificsDeferred.await()
+                        var genreList = results.Genre.split(",")
+                        results.Genre_helper=genreList
+                        _specifics.value = results
+                    } catch (e:Exception){
+
+                    }
+                }
+                else {
+                    _specifics.value = results
+                }
             } catch (e:Exception){
 
             }
