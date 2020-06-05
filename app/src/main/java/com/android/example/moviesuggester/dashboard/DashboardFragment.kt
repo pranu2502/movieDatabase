@@ -53,13 +53,14 @@ class DashboardFragment : Fragment() {
 
             override fun afterTextChanged(editable: Editable) {
                 //after the change calling the method and passing the search input
-                dashboardViewModel.getText(editable.toString())
+
+                    dashboardViewModel.getText(editable.toString())
             }
         })
 
-        var animFadein = AnimationUtils.loadAnimation(
-            context,
-            R.anim.fade_in)
+//        var animFadein = AnimationUtils.loadAnimation(
+//            context,
+//            R.anim.slide_in_left)
 
         dashboardViewModel.navigateToSelectedProperty.observe(this, Observer {
             if (null != it) {

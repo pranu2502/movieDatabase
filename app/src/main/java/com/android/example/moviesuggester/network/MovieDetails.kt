@@ -2,12 +2,12 @@ package com.android.example.moviesuggester.network
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
-
+@Parcelize
 data class ResultDetails(
-    val Search:List<MovieDetails>,
-    val totalResults:String,
+    var Search:List<MovieDetails>,
+    val totalResults:String ,
     val Response:String
-)
+):Parcelable
 
 
 @Parcelize
