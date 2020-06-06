@@ -37,10 +37,8 @@ data class MovieSpecifics(
     val Type: String,
     val BoxOffice:String,
     val Production:String,
-    var Genre_helper:List<String>,
     val imdbRating:String
 ):Parcelable
-
 
 @Parcelize
 data class RatingSources(

@@ -11,6 +11,8 @@ import com.android.example.moviesuggester.dashboard.SearchStatus
 import com.android.example.moviesuggester.network.MovieDetails
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.bumptech.glide.request.RequestOptions.bitmapTransform
+import jp.wasabeef.glide.transformations.BlurTransformation
 
 
 @BindingAdapter("listData")
@@ -68,7 +70,7 @@ fun bindSearch(statusImageView: ImageView,status:SearchStatus?){
         when (status) {
             SearchStatus.NOT -> {
                 statusImageView.visibility = View.VISIBLE
-                statusImageView.setImageResource(R.drawable.non_search)
+                statusImageView.setImageResource(R.drawable.searchemo)
             }
 
             SearchStatus.SEARCHED -> {
@@ -76,6 +78,22 @@ fun bindSearch(statusImageView: ImageView,status:SearchStatus?){
             }
         }
     }
+}
+
+@BindingAdapter("blurImageUrl")
+fun bindBlurImage(imgView: ImageView, imgUrl: String?) {
+
+    imgUrl?.let {
+        val imgUri = imgUrl.toUri().buildUpon().scheme("https").build()
+
+        Glide.with(imgView.context)
+            .load(imgUri)
+            .apply(
+                RequestOptions.bitmapTransform(BlurTransformation(25, 3)))
+                    .error(R.drawable.unavailable)
+            .into(imgView)
+    }
+
 }
 
 

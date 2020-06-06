@@ -71,6 +71,7 @@ class DashboardFragment : Fragment() {
             }
         })
 
+
         setHasOptionsMenu(true)
 
         return binding.root

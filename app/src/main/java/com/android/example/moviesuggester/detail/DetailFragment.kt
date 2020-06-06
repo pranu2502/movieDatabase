@@ -37,9 +37,6 @@ class DetailFragment : Fragment() {
 
         val application = requireNotNull(activity).application
 
-        val rating = binding.root.findViewById<RatingBar>(R.id.rating_stars)
-
-
         val movieDetails = DetailFragmentArgs.fromBundle(arguments!!).selectedProperty
 
         val viewModelFactory = DetailViewModelFactory(movieDetails, application)
