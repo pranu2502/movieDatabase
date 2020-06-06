@@ -89,7 +89,7 @@ fun bindBlurImage(imgView: ImageView, imgUrl: String?) {
         Glide.with(imgView.context)
             .load(imgUri)
             .apply(
-                RequestOptions.bitmapTransform(BlurTransformation(25, 3)))
+                RequestOptions.bitmapTransform(BlurTransformation(40, 10)))
                     .error(R.drawable.unavailable)
             .into(imgView)
     }
