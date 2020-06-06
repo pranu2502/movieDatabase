@@ -1,4 +1,4 @@
-# movieDatabase
+# MovieDatabase
 
 Movie Database uses OMDB API to fetch results from the internet based upon your search.
 
